@@ -30,12 +30,9 @@ void setup() {
 
 
 void loop() {
-  int xA0, xD0;                     // Создаем переменные
+  int xA0, xD0;                     
   xD0 = digitalRead (pinD0); 
-  
   if (xD0 == HIGH) sending(analogRead(pinA0));  
-  
-  sending(get_noise());
   digitalWrite(LED_BUILTIN, HIGH);
   delay(1000);
   digitalWrite(LED_BUILTIN, LOW);
